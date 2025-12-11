@@ -152,6 +152,14 @@
     navigation: auto;
   }
 
+  ::view-transition-old(root) {
+    animation-duration: 0.1s;
+  }
+
+  ::view-transition-new(root) {
+    animation-duration: 0.1s;
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;

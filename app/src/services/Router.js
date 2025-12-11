@@ -11,9 +11,9 @@ const Router = {
       Router.go(event.state.route, false);
     });
 
-    Router.go(location.pathname);
+    Router.go(location.pathname, true, true);
   },
-  go: (route, addToHistory = true) => {
+  go: (route, isInitialLoad = false, addToHistory = true) => {
     if (addToHistory) {
       history.pushState({ route }, '', route);
     }
@@ -50,7 +50,7 @@ const Router = {
       document.querySelector("main").appendChild(pageElement);
     }
 
-    if (!document.startViewTransition) {
+    if (isInitialLoad) {
       // We don't do a transition
       updatePage();
     } else {
