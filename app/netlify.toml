@@ -3,3 +3,18 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  # Match all hashed assets in the 'assets' directory
+  for = "/assets/*"
+  [headers.values]
+    # Cache indefinitely (one year) and tell proxies/CDNs not to modify it.
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Match all non-hashed files (index.html, manifest.json, etc.)
+  for = "/*"
+  [headers.values]
+    # Cache for a short time (e.g., 5 minutes) to allow quick refresh for updates.
+    # The browser will re-validate if it's older than 5 minutes.
+    Cache-Control = "public, max-age=300, must-revalidate"
