@@ -145,9 +145,7 @@
     --border-radius-2: 0.5rem;
     --border-radius-3: 0.75rem;
   }
-}
 
-@layer base {
   @view-transition {
     navigation: auto;
   }
@@ -176,7 +174,7 @@
     color: var(--text-main);
     background-color: var(--background-main);
   }
-  
+ 
   h1,
   h2,
   h3,
@@ -200,3 +198,20 @@
   }
 }
 
+@layer components {
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}

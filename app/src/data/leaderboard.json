@@ -1,0 +1,20 @@
+{
+  "leaderboard": [
+    {
+      "username": "bob",
+      "score": 19
+    },
+    {
+      "username": "dave",
+      "score": 18
+    },
+    {
+      "username": "roger",
+      "score": 18
+    },
+    {
+      "username": "katherine",
+      "score": 11
+    }
+  ]
+}

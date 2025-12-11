@@ -1,4 +1,10 @@
 export class SignInPage extends HTMLElement {
+
+  #formData = {
+    email: "",
+    password: ""
+  }
+
   constructor() {
     super()
   }
@@ -7,6 +13,10 @@ export class SignInPage extends HTMLElement {
     const template = document.getElementById("signin-page-template");
     const content = template.content.cloneNode(true);
     this.appendChild(content);
+  }
+
+  setFormBindings() {
+
   }
 }
 

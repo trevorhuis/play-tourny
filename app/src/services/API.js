@@ -1,8 +1,8 @@
 const API = {
-  url: "/data/menu.json",
-  fetchMenu: async () => {
-    const result = await fetch(API.url);
-    return await result.json();
+  leaderboardUrl: "src/data/leaderboard.json",
+  fetchLeaderboard: async () => {
+    const result = await fetch(API.leaderboardUrl)
+    return await result.json()
   }
 }
 

@@ -36,6 +36,7 @@ const Router = {
       case "/groups":
         break;
       case "/leaderboard":
+        pageElement = document.createElement("leaderboard-page");
         break;
       default:
         break;
