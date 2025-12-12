@@ -13,13 +13,17 @@
 
 <body>
   <header>
-    <h1>Tourny</h1>
+    <nav>
+      <h1><a class="navlink" href="/">Tourny</a></h1>
+      <a class="navlink" href="/groups">Groups</a>
+      <a class="navlink" href="/leaderboard">Leaderboard</a>
+    </nav>
   </header>
 
   <main></main>
 
   <footer>
-
+    <p>Tourny</p>
   </footer>
 
   <template id="landing-page-template">
@@ -29,7 +33,7 @@
   </template>
 
   <template id="signin-page-template">
-    <form>
+    <form class="authForm" id="signInForm">
       <label for="email">Your Email</label>
       <input name="email" type="email">
       <label for="password">Password</label>
@@ -41,13 +45,13 @@
   </template>
 
   <template id="signup-page-template">
-    <form>
+    <form class="authForm" id="signUpForm">
       <label for="username">Username</label>
-      <input name="username" required>
+      <input name="username" id="username" required>
       <label for="email">Your Email</label>
-      <input name="email" type="email">
+      <input name="email" type="email" id="email">
       <label for="password">Password</label>
-      <input name="password" type="password">
+      <input name="password" type="password" id="password">
       <button type="submit">Sign up</button>
       <p>Already have an account?</p>
       <a href="#" onclick="app.router.go('/signin'); event.preventDefault()">Sign In</a>
@@ -69,6 +73,7 @@
   </template>
 
   <template id="leaderboard-page-template">
+    <h1>Global Leaderboard</h1>
     <table>
       <thead>
         <tr>

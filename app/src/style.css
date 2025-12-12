@@ -196,6 +196,10 @@
   img {
     border-radius: var(--border-radius-3);
   }
+
+  main {
+    min-height: 100vh;
+  }
 }
 
 @layer components {
@@ -213,5 +217,33 @@
 
   tr:nth-child(even) {
     background-color: #dddddd;
+  }
+
+  nav {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navlink:hover {
+    cursor: pointer;
+  }
+
+  .authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+
+    input {
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    button[type="submit"] {
+      border-radius: 8px;
+      cursor: pointer;
+    }
   }
 }
